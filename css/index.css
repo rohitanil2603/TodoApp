@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #232023;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #333333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+  }
+ 
+.tasks {
+  width: 45%; /* Adjusted width */
+  padding: 20px;
+  border: 1px solid #373737;
+  border-radius: 5px;
+  background-color: #41424C;
+  font-size: 16px; /* Increased font size */
+}
+
+.edit-icon,
+.delete-icon {
+  margin-left: 10px; /* Add space between icons if needed */
+  cursor: pointer;
+  /* Other styles for icons */
+}
+ .edit-icon{
+    margin-left:100px;
+   
+ }
+.tasks li {
+  display:flex;
+  margin-bottom: 15px; /* Increased margin between tasks */
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Zoom icon */
+.tasks li:hover::after {
+  content: '\f00e'; /* Unicode for FontAwesome zoom-in icon */
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tasks li:hover {
+  background-color: #3F3F43;
+}
+
+/* Show icon on hover */
+.tasks li:hover::after {
+  opacity: 1;
+}
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #333333;
+    color: #fff;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* On hover, change button background color */
+  button:hover {
+    background-color: #3F3F43;
+  }
+  
+  /* Updated icon color */
+  button .icon {
+    margin-right: 5px;
+  }
+  
+  /* Add specific styles for different buttons if needed */
+  /* For example, if you have buttons with different classes */
+  .add-task-button {
+    background-color: #41424C;
+  }
+  
+  /* Add hover effect to list items or any other elements */
+  .tasks li:hover {
+    background-image: url('path-to-your-icon/icon.png'); /* Replace with your icon path */
+    background-size: 20px; /* Adjust icon size */
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 30px; /* Adjust padding to accommodate icon */
+    background-color: #3F3F43; /* Hover color */
+  }
+  
